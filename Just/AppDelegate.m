@@ -12,6 +12,60 @@
 
 @synthesize window = _window;
 
+
+- (id)init
+{
+    self = [super init];
+    if(self) {
+        questions = [[NSMutableArray alloc] init];
+        answers = [[NSMutableArray alloc] init];
+        
+        [questions addObject:@"What is 1 + 2?"];
+        [answers addObject:@"3"];
+        
+        [questions addObject:@"What is the capital of Vermont?"];
+        [answers addObject:@"Montperlier"];      
+        
+        [questions addObject:@"From what is cognac made?"];
+        [answers addObject:@"Grapes"];
+        
+    }
+    
+    return self;
+}
+
+- (IBAction)showQuestion:(id)sender
+{
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex == [questions count]) {
+        
+        currentQuestionIndex = 0;
+        
+    }
+    
+    NSString *question = [questions objectAtIndex:currentQuestionIndex];
+    
+    NSLog(@"displaying question: %@", question);
+    
+    
+    
+    [questionField setText:question];
+    
+    [answerField setText:@"???"];
+    
+}
+
+
+- (IBAction)showAnswer:(id)sender
+{
+    NSString *answer = [answers objectAtIndex:currentQuestionIndex];
+    
+    [answerField setText:answer];
+}
+                      
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
  //   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
