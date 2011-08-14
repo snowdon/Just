@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 {
     CLLocationManager *locationManager;
     
@@ -20,6 +20,10 @@
     
 }
 
+
 @property (strong, nonatomic) IBOutlet UIWindow *window;
+
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)loc;
 
 @end

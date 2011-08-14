@@ -7,10 +7,37 @@
 //
 
 #import "AppDelegate.h"
+#import "MapPoint.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+
+-(void)findLocation
+{
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationTitleField setHidden:YES];    
+}
+
+- (void)foundLocation:(CLLocation *)loc
+{
+    CLLocationCoordinate2D coord = [loc coordinate];
+    
+    MapPoint *mp = [[[MapPoint alloc] initWithCoordinate:coord
+                                                   title:[locationTitleField text]];
+    
+    [worldView addAnnotation:mp];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+ 
+    [worldView setRegion:region animated:YES];
+    
+    [locationTitleField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,10 +52,25 @@
     
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
-    [locationManager startUpdatingLocation];
-    
+//    [locationManager startUpdatingLocation];
+    [worldView setShowsUserLocation:YES];  
     
     [self.window makeKeyAndVisible];
+    return YES;
+}
+
+- (void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)u
+{
+    CLLocationCoordinate2D loc = [u coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)tf
+{
+    [self findLocation];
+    [tf resignFirstResponder];
+    
     return YES;
 }
 

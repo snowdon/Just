@@ -14,6 +14,7 @@
 		15530AD113F01C1500C6AEDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15530AD013F01C1500C6AEDB /* main.m */; };
 		15530AD513F01C1600C6AEDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15530AD413F01C1600C6AEDB /* AppDelegate.m */; };
 		15530ADC13F01C7A00C6AEDB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15530ADB13F01C7A00C6AEDB /* MainWindow.xib */; };
+		156FB79113F7FC0E008EB3BE /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FB79013F7FC0E008EB3BE /* MapPoint.m */; };
 		15C7C7A913F784250049A0E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C7C7A813F784250049A0E8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		15530AD313F01C1500C6AEDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15530AD413F01C1600C6AEDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		15530ADB13F01C7A00C6AEDB /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		156FB78F13F7FC0E008EB3BE /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		156FB79013F7FC0E008EB3BE /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		15C7C7A813F784250049A0E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,8 @@
 			children = (
 				15530AD313F01C1500C6AEDB /* AppDelegate.h */,
 				15530AD413F01C1600C6AEDB /* AppDelegate.m */,
+				156FB78F13F7FC0E008EB3BE /* MapPoint.h */,
+				156FB79013F7FC0E008EB3BE /* MapPoint.m */,
 				15530ACB13F01C1500C6AEDB /* Supporting Files */,
 			);
 			path = Just;
@@ -161,6 +166,7 @@
 			files = (
 				15530AD113F01C1500C6AEDB /* main.m in Sources */,
 				15530AD513F01C1600C6AEDB /* AppDelegate.m in Sources */,
+				156FB79113F7FC0E008EB3BE /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
