@@ -17,8 +17,32 @@
  //   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
   //  self.window.backgroundColor = [UIColor whiteColor];
+    locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager setDelegate:self];
+    
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    [locationManager startUpdatingLocation];
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

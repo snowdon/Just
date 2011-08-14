@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15436FF013F02C51008365C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15436FEF13F02C51008365C2 /* CoreLocation.framework */; };
 		15530AC713F01C1500C6AEDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15530AC613F01C1500C6AEDB /* UIKit.framework */; };
 		15530AC913F01C1500C6AEDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15530AC813F01C1500C6AEDB /* Foundation.framework */; };
 		15530ACF13F01C1500C6AEDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15530ACD13F01C1500C6AEDB /* InfoPlist.strings */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15436FEF13F02C51008365C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		15530AC213F01C1500C6AEDB /* Just.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Just.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15530AC613F01C1500C6AEDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15530AC813F01C1500C6AEDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15436FF013F02C51008365C2 /* CoreLocation.framework in Frameworks */,
 				15530AC713F01C1500C6AEDB /* UIKit.framework in Frameworks */,
 				15530AC913F01C1500C6AEDB /* Foundation.framework in Frameworks */,
 			);
@@ -44,6 +47,7 @@
 		15530AB713F01C1500C6AEDB = {
 			isa = PBXGroup;
 			children = (
+				15436FEF13F02C51008365C2 /* CoreLocation.framework */,
 				15530ACA13F01C1500C6AEDB /* Just */,
 				15530AC513F01C1500C6AEDB /* Frameworks */,
 				15530AC313F01C1500C6AEDB /* Products */,
@@ -256,6 +260,7 @@
 				15530ADA13F01C1600C6AEDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
