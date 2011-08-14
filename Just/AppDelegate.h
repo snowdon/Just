@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     CLLocationManager *locationManager;
+    
+    IBOutlet MKMapView *worldView;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
+    IBOutlet UITextField *locationTitleField;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
